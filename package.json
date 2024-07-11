@@ -1,24 +1,43 @@
 {
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "build:watch": "tsc --watch",
+    "dev": "next dev",
+    "lint": "next lint"
+  },
   "name": "genkitchen",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@genkit-ai/ai": "^0.5.5",
+    "@genkit-ai/core": "^0.5.5",
+    "@genkit-ai/dotprompt": "^0.5.5",
+    "@genkit-ai/flow": "^0.5.5",
+    "@genkit-ai/vertexai": "^0.5.5",
+    "@grpc/grpc-js": "^1.10.11",
+    "@material-tailwind/react": "^2.1.9",
+    "@mui/icons-material": "^5.15.19",
+    "express": "^4.19.2",
+    "minisearch": "^7.0.0",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "server-only": "^0.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "daisyui": "^4.12.10",
+    "genkit": "^0.5.5",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
   }
 }
