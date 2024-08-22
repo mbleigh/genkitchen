@@ -26,6 +26,9 @@ importers:
       '@genkit-ai/vertexai':
         specifier: ^0.5.10
         version: 0.5.10(@genkit-ai/ai@0.5.10)(@genkit-ai/core@0.5.10)(@genkit-ai/flow@0.5.10)
+      '@types/body-parser':
+        specifier: ^1.19.5
+        version: 1.19.5
       '@types/multer':
         specifier: ^1.4.11
         version: 1.4.11
