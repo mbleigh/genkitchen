@@ -13,8 +13,9 @@
     "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    // "noEmit": true,
+    "jsx": "react-jsx",
+    "outDir": "dist-ssr"
   },
   "include": ["src"]
 }

@@ -1,12 +1,12 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "genkitchen",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "nodemon -w src/server -x tsx src/home/server/main.ts",
-    "start": "NODE_ENV=production tsx src/home/server/main.ts",
-    "build": "vite build"
+    "start": "NODE_ENV=production node dist-ssr/home/server/main.js",
+    "build": "vite build && tsc"
   },
   "dependencies": {
     "@genkit-ai/ai": "^0.5.10",
