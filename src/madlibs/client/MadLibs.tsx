@@ -1,7 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { post } from "../../common/client/util.js";
 
 interface Game {
   title: string;
@@ -10,11 +9,21 @@ interface Game {
 }
 
 async function generateMadLib(subject: string) {
-  return post("/api/madlibs/generate", { subject });
+  const response = await fetch("/api/madlibs/generate", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ subject }),
+  });
+  return response.json();
 }
 
 async function generateSolution(game: Game) {
-  return post("/api/madlibs/solve", { blanks: game.blanks });
+  const response = await fetch("/api/madlibs/solve", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ blanks: game.blanks }),
+  });
+  return response.json();
 }
 
 export default function MadLibs() {
@@ -48,7 +57,7 @@ export default function MadLibs() {
     setLoading(true);
     try {
       const solution = await generateSolution(game);
-      setAnswers(solution);
+      setAnswers(solution.answers);
     } catch (error) {
       console.error("Error generating solution:", error);
     }

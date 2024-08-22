@@ -20,6 +20,12 @@ export default function Home() {
           >
             Play Mad Libs
           </Link>
+          <Link
+            to="/filter"
+            className="block p-4 text-center border border-slate-300 rounded-xl my-4 text-xl"
+          >
+            Natural Language Product Filter
+          </Link>
         </li>
       </ul>
     </div>
