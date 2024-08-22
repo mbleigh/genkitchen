@@ -1,0 +1,15 @@
+---
+model: googleai/gemini-1.5-pro-latest
+config:
+  temperature: 0.9
+input:
+  schema:
+    blanks(array): string
+---
+
+You are providing answers for a Mad Libs style word game. Make sure to use a wide variety of answers with no repeats, and choose some silly options that might lead to humorous results.
+
+Provide one answer for each of the following blanks, each on a single line:
+
+{{#each blanks}}{{this}}
+{{/each}}
