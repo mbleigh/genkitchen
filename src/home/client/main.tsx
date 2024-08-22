@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home.js";
 import AnalyzeImage from "../../analyzeImage/client/index.js";
 import MadLibs from "../../madlibs/client/index.js";
-import ProductFilter from "../../filter/client";
+import ProductFilter from "../../filter/client/index.js";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
