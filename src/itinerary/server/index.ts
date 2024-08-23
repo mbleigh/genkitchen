@@ -1,10 +1,10 @@
 import { prompt } from "@genkit-ai/dotprompt";
 import { defineFlow } from "@genkit-ai/flow";
-import { z } from "zod";
 
 import destinations from "../data.js";
 import { flowRoute } from "../../common/server/util.js";
 import { Router } from "express";
+import { z } from "@genkit-ai/core/schema";
 
 export const UserPreferencesSchema = z.object({
   energyLevel: z.union([z.string(), z.number()]),

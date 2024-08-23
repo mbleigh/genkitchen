@@ -1,12 +1,12 @@
 import { promptRef } from "@genkit-ai/dotprompt";
 import { defineFlow } from "@genkit-ai/flow";
-import { z } from "zod";
 import { FilterSchema } from "../schema.js";
 import { Router } from "express";
 import { flowRoute } from "../../common/server/util.js";
 
 import "../../common/server/genkit.js";
 import { defineSchema } from "@genkit-ai/core";
+import { z } from "@genkit-ai/core/schema";
 
 defineSchema("Filter", FilterSchema);
 
