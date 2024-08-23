@@ -9,12 +9,15 @@
     "build": "vite build && tsc"
   },
   "dependencies": {
+    "@emotion/styled": "^11.13.0",
     "@genkit-ai/ai": "^0.5.10",
     "@genkit-ai/core": "^0.5.10",
     "@genkit-ai/dotprompt": "^0.5.10",
     "@genkit-ai/flow": "^0.5.10",
     "@genkit-ai/googleai": "^0.5.10",
     "@genkit-ai/vertexai": "^0.5.10",
+    "@material-tailwind/react": "^2.1.9",
+    "@mui/icons-material": "^5.16.7",
     "@types/body-parser": "^1.19.5",
     "@types/multer": "^1.4.11",
     "body-parser": "^1.20.2",

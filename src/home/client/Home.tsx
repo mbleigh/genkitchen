@@ -26,6 +26,12 @@ export default function Home() {
           >
             Natural Language Product Filter
           </Link>
+          <Link
+            to="/itinerary"
+            className="block p-4 text-center border border-slate-300 rounded-xl my-4 text-xl"
+          >
+            Itinerary Planner
+          </Link>
         </li>
       </ul>
     </div>

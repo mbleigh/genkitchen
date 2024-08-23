@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+
+import withMT from "@material-tailwind/react/utils/withMT";
+
+export default withMT({
   content: ["./index.html", "./src/*/client/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
@@ -20,4 +23,4 @@ export default {
   daisyui: {
     themes: ["bumblebee"],
   },
-};
+});
