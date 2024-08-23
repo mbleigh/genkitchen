@@ -80,6 +80,9 @@ importers:
       vite-express:
         specifier: '*'
         version: 0.18.0
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@types/express':
         specifier: ^4.17.21

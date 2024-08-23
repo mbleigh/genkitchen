@@ -13,16 +13,21 @@
     <title>Genkitchen: AI Experiments with Firebase Genkit</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" class="mb-24"></div>
     <div
-      class="fixed flex justify-center items-center bottom-0 left-0 right-0 text-center bg-blue-gray-900 text-lg p-4 text-white"
+      class="fixed flex justify-center text-xs md:text-lg items-center bottom-0 left-0 right-0 text-center bg-blue-gray-900 p-4 text-white"
     >
-      <img src="/genkit_icon.svg" alt="Genkit icon" class="size-8 mr-4" />
+      <img src="/genkit_icon.svg" alt="Genkit icon" class="size-8 mr-4 hidden md:block" />
       <div>
-        <a class="font-medium text-yellow-200" href="/">Genkitchen</a>, a collection of Gemini
-        experiments by
-        <a class="font-medium text-yellow-200" href="https://mbleigh.dev">Michael Bleigh</a>.
-        Powered by
+        <a
+          class="font-medium text-yellow-200"
+          href="https://github.com/mbleigh/genkitchen"
+          target="_blank"
+          >Genkitchen</a
+        ><span class="hidden md:inline">, a collection of Gemini experiments</span> by
+        <a class="font-medium text-yellow-200" href="https://mbleigh.dev" target="_blank"
+          >Michael Bleigh</a
+        >. Powered by
         <a
           href="https://github.com/firebase/genkit"
           target="_blank"

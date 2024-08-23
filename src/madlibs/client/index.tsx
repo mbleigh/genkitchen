@@ -39,7 +39,7 @@ export default function MadLibs() {
   const handleAnswerSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const newAnswers = game!.blanks.map((blank) => formData.get(blank) as string);
+    const newAnswers = game!.blanks.map((blank, i) => formData.get(`blank${i}`) as string);
     setAnswers(newAnswers);
   };
 
@@ -57,7 +57,7 @@ export default function MadLibs() {
 
   if (!game) {
     return (
-      <form onSubmit={handleSubjectSubmit} className="space-y-4 max-w-xl mx-auto text-center">
+      <form onSubmit={handleSubjectSubmit} className="space-y-4 p-4 max-w-xl mx-auto text-center">
         <div className="flex justify-center mt-12 mb-8">
           <Link
             to="/"
@@ -66,7 +66,7 @@ export default function MadLibs() {
             <ArrowLeft className="size-4" /> Back to Home
           </Link>
         </div>
-        <h1 className="text-6xl text-center mt-12 mb-8">Gemini Mad Libs</h1>
+        <h1 className="text-4xl md:text-6xl text-center mt-12 mb-8">Gemini Mad Libs</h1>
         <div>
           <label htmlFor="subject" className="block text-xl text-center text-gray-700 py-4">
             Enter a subject for your story:
@@ -96,17 +96,22 @@ export default function MadLibs() {
       <div className="space-y-4 mx-auto max-w-xl">
         <h2 className="text-4xl font-bold mt-12 mb-8 text-center">{game.title}</h2>
         <form onSubmit={handleAnswerSubmit} className="space-y-4">
-          <div className=" flex flex-wrap items-center justify-center">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center p-4">
             {game.blanks.map((blank, index) => (
-              <div key={index}>
-                <label
-                  htmlFor={blank}
-                  className="block text-sm font-light text-center text-gray-700 border rounded-lg p-2 m-2"
-                >
-                  <div>{blank}</div>
-                  <input type="text" id={blank} name={blank} className="text-xl" required />
-                </label>
-              </div>
+              <label
+                key={index}
+                htmlFor={blank}
+                className="block text-sm font-light text-center text-gray-700 border rounded-lg p-2 m-2 w-full md:w-auto"
+              >
+                <div>{blank}</div>
+                <input
+                  type="text"
+                  id={blank}
+                  name={`blank${index}`}
+                  className="text-xl w-full md:w-auto"
+                  required
+                />
+              </label>
             ))}
           </div>
           <div className="flex space-x-4 text-center justify-center">
@@ -132,9 +137,9 @@ export default function MadLibs() {
 
   if (game && answers) {
     return (
-      <div className="space-y-4 max-w-xl mx-auto">
+      <div className="space-y-4 max-w-xl mx-auto p-4">
         <h2 className="text-4xl mt-12 mb-8 text-center font-bold">{game.title}</h2>
-        <div className="text-2xl">
+        <div className="text-xl md:text-2xl">
           {game.story.map((part, index) => (
             <React.Fragment key={index}>
               <span className="inline mb-4">{part}</span>
@@ -149,16 +154,26 @@ export default function MadLibs() {
             </React.Fragment>
           ))}
         </div>
-        <button
-          onClick={() => {
-            setGame(null);
-            setAnswers(null);
-            setSubject("");
-          }}
-          className="block mx-auto justify-center py-2 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Start Over
-        </button>
+        <div class="flex justify-center">
+          <button
+            onClick={() => {
+              setAnswers(null);
+            }}
+            className="block mx-4 justify-center py-2 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Try Again
+          </button>
+          <button
+            onClick={() => {
+              setGame(null);
+              setAnswers(null);
+              setSubject("");
+            }}
+            className="block mx-4 justify-center py-2 px-4 border border-transparent text-xl font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Start Over
+          </button>
+        </div>
       </div>
     );
   }

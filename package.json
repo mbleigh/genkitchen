@@ -32,7 +32,8 @@
     "react-router-dom": "^6.26.1",
     "tsx": "^4.3.0",
     "typescript": "^5.3.2",
-    "vite-express": "*"
+    "vite-express": "*",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

@@ -15,7 +15,9 @@ function LazyPage(Component: any) {
     return (
       <React.Suspense
         fallback={
-          <div className="w-full h-full flex justify-center items-center text-xl">Loading...</div>
+          <div className="w-full h-full flex justify-center items-center text-xl min-h-screen">
+            Loading...
+          </div>
         }
       >
         <Component />
