@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "@genkit-ai/core/schema";
 
 // Define enums for multi-select options (checkboxes)
 export const ColorEnum = z.enum([
