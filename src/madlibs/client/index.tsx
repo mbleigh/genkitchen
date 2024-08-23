@@ -154,7 +154,7 @@ export default function MadLibs() {
             </React.Fragment>
           ))}
         </div>
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <button
             onClick={() => {
               setAnswers(null);
