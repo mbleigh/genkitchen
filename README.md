@@ -5,7 +5,7 @@ Gemini models with [Firebase Genkit](https://github.com/mbleigh/genkit).
 
 Like the demos? Let me know [on Twitter](https://twitter.com/mbleigh).
 
-### [Try the Demos](https://genkitchen.mbleigh.devb/)
+### [Try the Demos](https://genkitchen.mbleigh.dev/)
 
 ## List of Demos
 
